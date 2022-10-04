@@ -6,7 +6,7 @@ const {v4:uuidv4}= require('uuid');
 const router = express.Router();
 let users = []
 
-const db= new sqlite.Database('data.db');
+const db= new sqlite.Database('./data.db');
 db.run("CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY AUTOINCREMENT, firstName TEXT NOT NULL, surname TEXT, age INTEGER)");
 
 
